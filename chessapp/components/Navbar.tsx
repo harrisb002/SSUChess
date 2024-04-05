@@ -10,7 +10,7 @@ const Navbar = () => {
     <div className={styles.navbarContainer}>
       {/* Conditionally render based on if wallet is connected */}
       <>
-        <h1>Chess App</h1>
+        <h1>SSU Chess</h1>
         <div className={styles.navbarOptions}>
           <Link href="/">
             <p>Dashboard</p>

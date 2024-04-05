@@ -1,11 +1,7 @@
 import {
   ConnectEmbed,
-  SmartWallet,
-  useAddress,
-  useSDK,
   useShowConnectEmbed,
   useUser,
-  useWallet,
 } from "@thirdweb-dev/react";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -26,7 +22,7 @@ const Login = () => {
   // Run the checkNewPlayer function when the user is logged in and not loading
   useEffect(() => {
     if (isLoggedIn && !isLoading) {
-        router.push("/"); // Push to home page
+      router.push("/"); // Push to home page
     }
   }, [isLoggedIn, isLoading, router]);
 

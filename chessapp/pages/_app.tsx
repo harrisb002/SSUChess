@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         }),
       ]}
       authConfig={{
-        domain: process.env.DOMAIN || "",
+        domain: process.env.NEXT_PUBLIC_DOMAIN || "",
         authUrl: "/api/auth",
       }}
     >
