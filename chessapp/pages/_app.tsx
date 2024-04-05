@@ -31,6 +31,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           gasless: true,
         }),
       ]}
+      authConfig={{
+        domain: process.env.DOMAIN || "",
+        authUrl: "/api/auth"
+      }}
     >
       <Navbar />
       <Component {...pageProps} />
