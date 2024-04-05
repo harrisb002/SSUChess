@@ -1,12 +1,27 @@
 # SSU Chess
 
-- This app will be used for a chess app that utilizes smart wallets and embedded wallets to offer email login and gasless transactions.
-- Deploys [ERC20](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/), [ERC721](https://ethereum.org/en/developers/docs/standards/tokens/erc-721/), [ERC1155](https://ethereum.org/en/developers/docs/standards/tokens/erc-1155/Í), and [staking contract](https://blog.thirdweb.com/guides/build-an-erc20-staking-smart-contract-web-application/) to build an on-chain idle chess game where a user earns tokens for staked NFTs which will be chess puzzles.
-- Will later allow users to play against one another and bet using their earned ERC20 tokens
-
 ## Description
 
-SSU Chess is a web3 chess app built to enable users to bet on games, either played personally or scheduled in tournaments. By integrating blockchain technology, Chess on Chain ensures transparency, security, and trust in every transaction, providing a seamless and engaging experience for chess enthusiasts and crypto gamers alike.
+- SSU Chess is a web3 chess app built to enable users to bet on games, either played personally or scheduled in tournaments.
+- Utilizes Squares (SQZ) tokens to bet and can be earned through games or by staking chess puzzles (NFT's)
+- Utilizes smart wallets/embedded wallets to offer email login and gasless transactions.
+
+## Contracts
+
+- [ERC20](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/)
+  - Sqaures (SQZ) will act as the tokens for this game
+  - Will allow users to play against one another and bet using their earned ERC20 tokens (SQZ)
+  - Token Supply initialized as 15,625,000 SQZ (1 Million boards/64 squares = 15,625,000 squares) 
+- [ERC721](https://ethereum.org/en/developers/docs/standards/tokens/erc-721/)
+  - Deploying OpenEditionERC721 allows the ability to set the individual metadata for the NFT's so that all the NFT's in this collection will be the same as it will be used to identify the "Worker NFT" to allow any amount of players to play the game.
+  - Used to validate whether or not the account signing in is a new account or not
+  - Set to only the owner can mint the NFT
+- [ERC1155](https://ethereum.org/en/developers/docs/standards/tokens/erc-1155/Í)
+  - Edition Drop tokens are semi-fungible and will be used to support the creation of chess puzzles and allow users to "claim" them.
+  - Allows for one NFT (chess puzzle) to have multiple owners of the tokens within that NFT
+- [StakeERC1155](https://blog.thirdweb.com/guides/build-an-erc20-staking-smart-contract-web-application/)
+  - Allows users to earn tokens (SQZ) for staked NFTs (chess puzzles).
+  - Each puzzle has unique earnings based upon difficulty (Base amount is 1 Ether ~ 1e+18 wei)
 
 ### Hopefull Features
 
@@ -27,4 +42,3 @@ SSU Chess is a web3 chess app built to enable users to bet on games, either play
 ### Other repos to be utilized
 
 - [Chessboard](https://github.com/harrisb002/BetChess)
-
