@@ -1,5 +1,5 @@
 import styles from "../styles/Home.module.css";
-import { useUser } from "@thirdweb-dev/react";
+import { ConnectWallet, useUser } from "@thirdweb-dev/react";
 import { getUser } from "./api/auth/[...thirdweb]";
 import { NextPage } from "next";
 import { useEffect } from "react";
@@ -28,6 +28,7 @@ const Home: NextPage = () => {
           width: "100%",
         }}
       ></div>
+      <ConnectWallet />
     </div>
   );
 };
