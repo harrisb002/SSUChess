@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 
 const Home: NextPage = () => {
-  // Check if the user is logged in and redirect to login if not 
+  // Check if the user is logged in and redirect to login if not
   const { isLoggedIn, isLoading } = useUser();
   const router = useRouter();
 
@@ -19,14 +19,15 @@ const Home: NextPage = () => {
 
   return (
     <div className={styles.main}>
-      <div style={{
-        display: "flex",
-        justifyContent: "flex-start",
-        alignItems: "flex-start",
-        flexDirection: "row",
-        width: "100%",
-      }}>
-      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "flex-start",
+          alignItems: "flex-start",
+          flexDirection: "row",
+          width: "100%",
+        }}
+      ></div>
     </div>
   );
 };
@@ -38,7 +39,7 @@ export async function getServerSideProps(context: any) {
   const user = await getUser(context.req);
 
   // Redirect to login if not logged in
-  if(!user) {
+  if (!user) {
     return {
       redirect: {
         destination: "/login",

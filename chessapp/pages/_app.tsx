@@ -6,19 +6,16 @@ import {
 } from "@thirdweb-dev/react";
 import "../styles/globals.css";
 import Navbar from "../components/Navbar";
-require('dotenv').config();
+require("dotenv").config();
 
-
-// This is the chain your dApp will work on.
-// Change this to the chain your app is built for.
-// You can also import additional chains from `@thirdweb-dev/chains` and pass them directly.
 const activeChain = "sepolia";
 
 // Make sure that account factory address is not undefined
 if (!process.env.NEXT_PUBLIC_ACCOUNT_FACTORY_CONTRACT_ADDRESS) {
-  throw new Error('ACCOUNT_FACTORY_CONTRACT_ADDRESS is not set.');
+  throw new Error("ACCOUNT_FACTORY_CONTRACT_ADDRESS is not set.");
 }
-const accountFactoryAddress = process.env.NEXT_PUBLIC_ACCOUNT_FACTORY_CONTRACT_ADDRESS;
+const accountFactoryAddress =
+  process.env.NEXT_PUBLIC_ACCOUNT_FACTORY_CONTRACT_ADDRESS;
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -33,7 +30,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       ]}
       authConfig={{
         domain: process.env.DOMAIN || "",
-        authUrl: "/api/auth"
+        authUrl: "/api/auth",
       }}
     >
       <Navbar />
