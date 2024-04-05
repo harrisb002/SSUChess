@@ -1,4 +1,4 @@
-# ChessApp
+# SSU Chess
 
 - This app will be used for a chess app that utilizes smart wallets and embedded wallets to offer email login and gasless transactions.
 - Deploys [ERC20](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/), [ERC721](https://ethereum.org/en/developers/docs/standards/tokens/erc-721/), [ERC1155](https://ethereum.org/en/developers/docs/standards/tokens/erc-1155/Í), and [staking contract](https://blog.thirdweb.com/guides/build-an-erc20-staking-smart-contract-web-application/) to build an on-chain idle chess game where a user earns tokens for staked NFTs which will be chess puzzles.
