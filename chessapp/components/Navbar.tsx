@@ -4,12 +4,11 @@ import Link from "next/link";
 
 const Navbar = () => {
   // Get the address of user
-  const address = useAddress();
+//   const address = useAddress();
 
   return (
     <div className={styles.navbarContainer}>
       {/* Conditionally render based on if wallet is connected */}
-      {address && (
         <>
           <h1>Chess App</h1>
           <div className={styles.navbarOptions}>
@@ -25,7 +24,6 @@ const Navbar = () => {
             {/* UI component from 3rd web that gives functioning connect capabilities*/}
           </div>
         </>
-      )}
     </div>
   );
 };
