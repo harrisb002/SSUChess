@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@thirdweb-dev/auth": "^4.1.55",
+    "@thirdweb-dev/engine": "^0.0.5",
     "@thirdweb-dev/react": "^4",
     "@thirdweb-dev/sdk": "^4",
     "dotenv": "^16.4.5",
