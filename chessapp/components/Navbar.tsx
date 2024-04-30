@@ -35,9 +35,12 @@ const Navbar = () => {
           </Link>
         </div>
         <div className={styles.navbarOptions}>
-                        {squaresBalance && (
-                            <p>{truncateNumber(squaresBalance?.displayValue as string)} {squaresBalance?.symbol}</p>
-                        )}
+          {squaresBalance && (
+            <p>
+              {truncateNumber(squaresBalance?.displayValue as string)}{" "}
+              {squaresBalance?.symbol}
+            </p>
+          )}
           <ConnectWallet />{" "}
           {/* UI component from 3rd web that gives functioning connect capabilities*/}
         </div>

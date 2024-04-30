@@ -9,6 +9,7 @@
   align-items: center;
   min-height: 90vh;
 }
+
 .main {
   max-width: 1440px;
   padding: 5rem 0;
@@ -141,10 +142,12 @@
   .header {
     margin-left: 0;
   }
+
   .grid {
     width: 100%;
     flex-direction: column;
   }
+
   .title {
     font-size: 3rem;
     line-height: 1.15;
@@ -155,6 +158,7 @@
 .footer {
   border-color: #222;
 }
+
 .logo img {
   filter: invert(1);
 }
@@ -168,12 +172,14 @@
   max-width: 1440px;
   margin: 0 auto;
 }
+
 .navbarOptions {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
 }
+
 .navbarOptions p {
   margin: 0;
   font-size: 0.9 rem;
@@ -182,6 +188,7 @@
   cursor: pointer;
   transition: color 0.3s;
 }
+
 .navbarOptions Link {
   margin: 0;
   font-size: 0.9 rem;
@@ -189,6 +196,7 @@
   color: white;
   cursor: pointer;
 }
+
 .navbarLogoutButton {
   padding: 0.5rem 1rem;
   border-radius: 5px;
@@ -198,6 +206,7 @@
   cursor: pointer;
   transition: background-color 0.3s;
 }
+
 .navbarLogoutButton:hover {
   background-color: #ff6b6b;
 }
@@ -212,6 +221,7 @@
   border-radius: 10px;
   min-width: 500px;
 }
+
 .signinContainer input {
   margin-bottom: 1rem;
   width: 100%;
@@ -221,6 +231,7 @@
   background-color: #272c34;
   color: white;
 }
+
 .submitButton {
   padding: 0.5rem;
   border-radius: 5px;
@@ -242,6 +253,7 @@
   border-radius: 10px;
   margin: 10px;
 }
+
 .workerContainer div {
   margin: 0 1rem;
 }
@@ -267,6 +279,7 @@
   justify-content: flex-start;
   align-items: flex-start;
 }
+
 .nftCardButton {
   width: 100% !important;
   padding: 0.5rem !important;
@@ -277,9 +290,11 @@
   cursor: pointer !important;
   transition: background-color 0.3s !important;
 }
+
 .nftCardButton:hover {
   background-color: #3b82f6 !important;
 }
+
 .nftCardButton:disabled {
   background-color: #272c34 !important;
   cursor: not-allowed !important;

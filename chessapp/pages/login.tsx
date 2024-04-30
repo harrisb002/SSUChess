@@ -45,7 +45,9 @@ const Login = () => {
         setLoadingStatus("Checking worker balance...");
 
         // Check if the user has a worker NFT
-        const workerContract = await sdk?.getContract(CHESSPLAYER_CONTRACT_ADDRESS);
+        const workerContract = await sdk?.getContract(
+          CHESSPLAYER_CONTRACT_ADDRESS
+        );
         const workerBalance = await workerContract?.erc721.balanceOf(address);
 
         // If the user does not have a worker, claim a worker and tokens
@@ -95,9 +97,9 @@ const Login = () => {
   // Run the checkNewPlayer function when the user is logged in and not loading
   useEffect(() => {
     if (isLoggedIn && !isLoading) {
-      router.push("/"); // Push to home page
+      // checkNewPlayer();
     }
-  }, [isLoggedIn, isLoading, router]);
+  }, [isLoggedIn, isLoading, wallet]);
 
   return (
     <div className={styles.container}>

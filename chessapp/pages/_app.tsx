@@ -6,8 +6,6 @@ import {
 } from "@thirdweb-dev/react";
 import "../styles/globals.css";
 import Navbar from "../components/Navbar";
-import { ACCOUNT_FACTORY_CONTRACT_ADDRESS } from "../constants/contracts";
-require("dotenv").config();
 
 const activeChain = "sepolia";
 
@@ -15,7 +13,6 @@ const activeChain = "sepolia";
 // if (!process.env.NEXT_PUBLIC_ACCOUNT_FACTORY_CONTRACT_ADDRESS) {
 //   throw new Error("ACCOUNT_FACTORY_CONTRACT_ADDRESS is not set.");
 // }
-const accountFactoryAddress = ACCOUNT_FACTORY_CONTRACT_ADDRESS
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -24,7 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       activeChain={activeChain}
       supportedWallets={[
         smartWallet(embeddedWallet(), {
-          factoryAddress: accountFactoryAddress,
+          factoryAddress: "0x23A231D8Bf83EceC5f966fD28Fc2f421Ea83df16",
           gasless: true,
         }),
       ]}
